@@ -1,0 +1,431 @@
+Analysis & Synthesis report for mult_seg
+Fri Apr 05 15:31:42 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |mult_seg|EasyMult:inst|state
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Apr 05 15:31:42 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; mult_seg                                    ;
+; Top-level Entity Name           ; mult_seg                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 3                                           ;
+; Total pins                      ; 55                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; mult_seg           ; mult_seg           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+---------+
+; ../EasyMult.vhd                  ; yes             ; User VHDL File                     ; C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd              ;         ;
+; ../bcd18in_6x7segmentOut.vhd     ; yes             ; User VHDL File                     ; C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd18in_6x7segmentOut.vhd ;         ;
+; ../bcd3_7segment.vhd             ; yes             ; User VHDL File                     ; C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd3_7segment.vhd         ;         ;
+; mult_seg.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/mult_seg/mult_seg.bdf     ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 51                     ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 101                    ;
+;     -- 7 input functions                    ; 0                      ;
+;     -- 6 input functions                    ; 0                      ;
+;     -- 5 input functions                    ; 0                      ;
+;     -- 4 input functions                    ; 3                      ;
+;     -- <=3 input functions                  ; 98                     ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 3                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 55                     ;
+;                                             ;                        ;
+; Total DSP Blocks                            ; 1                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; EasyMult:inst|state.S2 ;
+; Maximum fan-out                             ; 19                     ;
+; Total fan-out                               ; 409                    ;
+; Average fan-out                             ; 1.90                   ;
++---------------------------------------------+------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Entity Name           ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------+-----------------------+--------------+
+; |mult_seg                        ; 101 (0)             ; 3 (0)                     ; 0                 ; 1          ; 55   ; 0            ; |mult_seg                                                ; mult_seg              ; work         ;
+;    |EasyMult:inst|               ; 59 (59)             ; 3 (3)                     ; 0                 ; 1          ; 0    ; 0            ; |mult_seg|EasyMult:inst                                  ; EasyMult              ; work         ;
+;    |bcd18in_6x7segmentOut:inst1| ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1                    ; bcd18in_6x7segmentOut ; work         ;
+;       |bcd3_7segment:Seg1|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg1 ; bcd3_7segment         ; work         ;
+;       |bcd3_7segment:Seg2|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg2 ; bcd3_7segment         ; work         ;
+;       |bcd3_7segment:Seg3|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg3 ; bcd3_7segment         ; work         ;
+;       |bcd3_7segment:Seg4|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg4 ; bcd3_7segment         ; work         ;
+;       |bcd3_7segment:Seg5|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg5 ; bcd3_7segment         ; work         ;
+;       |bcd3_7segment:Seg6|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mult_seg|bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg6 ; bcd3_7segment         ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------+
+; State Machine - |mult_seg|EasyMult:inst|state ;
++----------+----------+----------+--------------+
+; Name     ; state.S2 ; state.S1 ; state.S0     ;
++----------+----------+----------+--------------+
+; state.S0 ; 0        ; 0        ; 0            ;
+; state.S1 ; 0        ; 1        ; 1            ;
+; state.S2 ; 1        ; 0        ; 1            ;
++----------+----------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; EasyMult:inst|opZero                                ; EasyMult:inst|Selector3 ; yes                    ;
+; EasyMult:inst|Result[1]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[0]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[2]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[4]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[3]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[5]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[7]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[6]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[8]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[10]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[9]                             ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[11]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[13]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[12]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[14]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[16]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[15]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|Result[17]                            ; EasyMult:inst|state.S2  ; yes                    ;
+; EasyMult:inst|multiplicant[0]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[1]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[2]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[3]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[4]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[5]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[6]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[7]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplicant[8]                       ; EasyMult:inst|state.S0  ; yes                    ;
+; EasyMult:inst|multiplier[0]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[1]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[2]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[3]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[4]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[5]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[6]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[7]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; EasyMult:inst|multiplier[8]                         ; EasyMult:inst|state.S1  ; yes                    ;
+; Number of user-specified and inferred latches = 37  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 3                           ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 101                         ;
+;     normal            ; 101                         ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 3                           ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 55                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.29                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Apr 05 15:31:30 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mult_seg -c mult_seg
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yhowa/onedrive/desktop/uwo/4b/3380/lab/lab3trick/easymult.vhd
+    Info (12022): Found design unit 1: EasyMult-Behavior File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 18
+    Info (12023): Found entity 1: EasyMult File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yhowa/onedrive/desktop/uwo/4b/3380/lab/lab3trick/bcd18in_6x7segmentout.vhd
+    Info (12022): Found design unit 1: bcd18in_6x7segmentOut-Behavioral File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd18in_6x7segmentOut.vhd Line: 16
+    Info (12023): Found entity 1: bcd18in_6x7segmentOut File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd18in_6x7segmentOut.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/yhowa/onedrive/desktop/uwo/4b/3380/lab/lab3trick/bcd3_7segment.vhd
+    Info (12022): Found design unit 1: bcd3_7segment-Behavioral File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd3_7segment.vhd Line: 9
+    Info (12023): Found entity 1: bcd3_7segment File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd3_7segment.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file mult_seg.bdf
+    Info (12023): Found entity 1: mult_seg
+Info (12127): Elaborating entity "mult_seg" for the top level hierarchy
+Info (12128): Elaborating entity "EasyMult" for hierarchy "EasyMult:inst"
+Warning (10492): VHDL Process Statement warning at EasyMult.vhd(58): signal "ip" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at EasyMult.vhd(66): signal "ip" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at EasyMult.vhd(73): signal "multiplicant" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at EasyMult.vhd(73): signal "multiplier" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at EasyMult.vhd(53): inferring latch(es) for signal or variable "multiplicant", which holds its previous value in one or more paths through the process File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Warning (10631): VHDL Process Statement warning at EasyMult.vhd(53): inferring latch(es) for signal or variable "opZero", which holds its previous value in one or more paths through the process File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Warning (10631): VHDL Process Statement warning at EasyMult.vhd(53): inferring latch(es) for signal or variable "multiplier", which holds its previous value in one or more paths through the process File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Warning (10631): VHDL Process Statement warning at EasyMult.vhd(53): inferring latch(es) for signal or variable "Result", which holds its previous value in one or more paths through the process File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[0]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[1]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[2]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[3]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[4]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[5]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[6]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[7]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[8]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[9]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[10]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[11]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[12]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[13]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[14]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[15]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[16]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "Result[17]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[0]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[1]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[2]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[3]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[4]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[5]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[6]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[7]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplier[8]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "opZero" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[0]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[1]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[2]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[3]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[4]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[5]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[6]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[7]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (10041): Inferred latch for "multiplicant[8]" at EasyMult.vhd(53) File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 53
+Info (12128): Elaborating entity "bcd18in_6x7segmentOut" for hierarchy "bcd18in_6x7segmentOut:inst1"
+Info (12128): Elaborating entity "bcd3_7segment" for hierarchy "bcd18in_6x7segmentOut:inst1|bcd3_7segment:Seg1" File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/bcd18in_6x7segmentOut.vhd Line: 19
+Warning (13012): Latch EasyMult:inst|opZero has unsafe behavior File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal EasyMult:inst|state.S1 File: C:/Users/yHowa/OneDrive/desktop/uwo/4b/3380/Lab/Lab3Trick/EasyMult.vhd Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 157 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 101 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Fri Apr 05 15:31:43 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
+
+

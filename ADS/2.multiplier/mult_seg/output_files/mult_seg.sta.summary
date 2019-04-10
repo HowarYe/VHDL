@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'EasyMult:inst|state.S2'
+Slack : -4.872
+TNS   : -82.210
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -3.274
+TNS   : -9.620
+
+Type  : Slow 1100mV 85C Model Setup 'EasyMult:inst|state.S0'
+Slack : -2.344
+TNS   : -2.344
+
+Type  : Slow 1100mV 85C Model Setup 'EasyMult:inst|state.S1'
+Slack : -1.683
+TNS   : -1.683
+
+Type  : Slow 1100mV 85C Model Hold 'EasyMult:inst|state.S0'
+Slack : 0.614
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'EasyMult:inst|state.S1'
+Slack : 0.628
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.905
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'EasyMult:inst|state.S2'
+Slack : 1.669
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -1.571
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'EasyMult:inst|state.S1'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'EasyMult:inst|state.S0'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'EasyMult:inst|state.S2'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'EasyMult:inst|state.S2'
+Slack : -4.903
+TNS   : -83.482
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -2.994
+TNS   : -8.769
+
+Type  : Slow 1100mV 0C Model Setup 'EasyMult:inst|state.S0'
+Slack : -2.320
+TNS   : -2.320
+
+Type  : Slow 1100mV 0C Model Setup 'EasyMult:inst|state.S1'
+Slack : -1.651
+TNS   : -1.651
+
+Type  : Slow 1100mV 0C Model Hold 'EasyMult:inst|state.S0'
+Slack : 0.521
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.554
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'EasyMult:inst|state.S1'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'EasyMult:inst|state.S2'
+Slack : 1.624
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -1.709
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'EasyMult:inst|state.S0'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'EasyMult:inst|state.S1'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'EasyMult:inst|state.S2'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -2.544
+TNS   : -7.459
+
+Type  : Fast 1100mV 85C Model Setup 'EasyMult:inst|state.S2'
+Slack : -2.493
+TNS   : -40.003
+
+Type  : Fast 1100mV 85C Model Setup 'EasyMult:inst|state.S0'
+Slack : -1.387
+TNS   : -1.387
+
+Type  : Fast 1100mV 85C Model Setup 'EasyMult:inst|state.S1'
+Slack : -0.750
+TNS   : -0.750
+
+Type  : Fast 1100mV 85C Model Hold 'EasyMult:inst|state.S0'
+Slack : 0.486
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'EasyMult:inst|state.S1'
+Slack : 0.667
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.848
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'EasyMult:inst|state.S2'
+Slack : 0.971
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.078
+TNS   : -0.232
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'EasyMult:inst|state.S1'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'EasyMult:inst|state.S0'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'EasyMult:inst|state.S2'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'EasyMult:inst|state.S2'
+Slack : -2.277
+TNS   : -37.065
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.010
+TNS   : -5.892
+
+Type  : Fast 1100mV 0C Model Setup 'EasyMult:inst|state.S0'
+Slack : -1.177
+TNS   : -1.177
+
+Type  : Fast 1100mV 0C Model Setup 'EasyMult:inst|state.S1'
+Slack : -0.628
+TNS   : -0.628
+
+Type  : Fast 1100mV 0C Model Hold 'EasyMult:inst|state.S0'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.531
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'EasyMult:inst|state.S1'
+Slack : 0.569
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'EasyMult:inst|state.S2'
+Slack : 0.895
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.079
+TNS   : -0.235
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'EasyMult:inst|state.S1'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'EasyMult:inst|state.S0'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'EasyMult:inst|state.S2'
+Slack : 0.479
+TNS   : 0.000
+
+------------------------------------------------------------
